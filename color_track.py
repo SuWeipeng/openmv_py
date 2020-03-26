@@ -15,7 +15,7 @@ clock = time.clock()
 while(True):
   clock.tick()
   img = sensor.snapshot()
-  blobs = img.find_blobs([red_threshold])
+  blobs = img.find_blobs([red_threshold], area_threshold=110)
   if blobs:
     print(blobs)
     for b in blobs:
