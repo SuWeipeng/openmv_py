@@ -14,3 +14,5 @@ while(True):
   blobs = img.find_blobs([red_threshold])
   if blobs:
     print(blobs)
+    for b in blobs:
+      img.draw_rectangle(b[0:4])
