@@ -55,7 +55,7 @@ gc.collect()
 
 img_1 = image.Image('/1.bmp')
 img_2 = image.Image('/2.bmp')
-b_nor_21 = img_1.b_nor(img_2).save('/b_nor_21.bmp')
+b_nor_21 = img_2.b_nor(img_1).save('/b_nor_21.bmp')
 del img_1,img_2,b_nor_21
 gc.collect()
 
@@ -69,6 +69,12 @@ img_1 = image.Image('/1.bmp')
 img_2 = image.Image('/2.bmp')
 b_xnor= img_1.b_xnor(img_2).save('b_xnor.bmp')
 del img_1,img_2,b_xnor
+gc.collect()
+
+img_1 = image.Image('/1.bmp')
+img_2 = image.Image('/2.bmp')
+b_xnor_21= img_2.b_xnor(img_1).save('b_xnor_21.bmp')
+del img_1,img_2,b_xnor_21
 gc.collect()
 
 machine.reset()
